@@ -17,6 +17,12 @@ class MainActivity : SwipeRefreshActivity<MainPresenter, MainAdapter, String>(),
     override fun setAutoLoadMore(): Boolean = false
 
     override fun onItemClick(view: View, position: Int, item: String) {
+        var list = presenter.getMainList()
+        var temp = ArrayList<String>()
+        list.forEach {
+            temp.add(it.appLog)
+        }
+        bindData(temp)
     }
 
     override fun provideTitle(): CharSequence = "MVP for AndroidX"

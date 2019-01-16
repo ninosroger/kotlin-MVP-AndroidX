@@ -19,6 +19,7 @@ class MainAdapter(context: Context) : BaseAdapter<MainAdapter.VHolder, String, M
 
     override fun bindData(holder: VHolder, position: Int) {
         var item = data[position]
+        holder.tvTitle.text = item
     }
 
     inner class VHolder(view: View) : RecyclerView.ViewHolder(view) {
