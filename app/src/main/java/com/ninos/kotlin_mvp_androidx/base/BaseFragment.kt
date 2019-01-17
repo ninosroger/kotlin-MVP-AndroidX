@@ -115,7 +115,7 @@ abstract class BaseFragment<P : BasePresenter<*, *>> : Fragment(), BaseView {
         builder.setTitle(title)
         builder.setMessage(message)
         builder.setCancelable(cancelable)
-        builder.setPositiveButton(btn) { _, _ -> handler }
+        builder.setPositiveButton(btn) { _, _ -> handler() }
         dialog = builder.create()
         dialog!!.show()
     }
@@ -138,8 +138,8 @@ abstract class BaseFragment<P : BasePresenter<*, *>> : Fragment(), BaseView {
         builder.setTitle(title)
         builder.setMessage(message)
         builder.setCancelable(cancelable)
-        builder.setPositiveButton(confirmStr) { _, _ -> confirm }
-        builder.setNegativeButton(cancelStr) { _, _ -> cancel }
+        builder.setPositiveButton(confirmStr) { _, _ -> confirm() }
+        builder.setNegativeButton(cancelStr) { _, _ -> cancel() }
         dialog = builder.create()
         dialog!!.show()
     }
