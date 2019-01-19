@@ -10,6 +10,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import com.google.android.material.snackbar.Snackbar
 
 /**
  * Created by ninos on 2019/1/8.
@@ -54,6 +55,10 @@ abstract class BaseFragment<P : BasePresenter<*, *>> : Fragment(), BaseView {
      */
     override fun showToast(text: String) {
         Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
+    }
+
+    override fun showSnackbar(text: String, view: View) {
+        Snackbar.make(view, text, Snackbar.LENGTH_LONG).show()
     }
 
     /**

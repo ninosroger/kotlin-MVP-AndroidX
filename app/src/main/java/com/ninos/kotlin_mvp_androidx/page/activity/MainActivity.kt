@@ -17,12 +17,13 @@ class MainActivity : SwipeRefreshActivity<MainPresenter, MainAdapter, String>(),
     override fun setAutoLoadMore(): Boolean = false
 
     override fun onItemClick(view: View, position: Int, item: String) {
-        var list = presenter.getMainList()
-        var temp = ArrayList<String>()
+        val list = presenter.getMainList()
+        val temp = ArrayList<String>()
         list.forEach {
             temp.add(it.appLog)
         }
         bindData(temp)
+        showSnackbar("", view)
     }
 
     override fun provideTitle(): CharSequence = "MVP for AndroidX"
@@ -35,7 +36,7 @@ class MainActivity : SwipeRefreshActivity<MainPresenter, MainAdapter, String>(),
 
     override fun pulldownRefresh() {
         super.pulldownRefresh()
-        var list = ArrayList<String>()
+        val list = ArrayList<String>()
         list.add("Android O")
         list.add("Android P")
         list.add("Android E")

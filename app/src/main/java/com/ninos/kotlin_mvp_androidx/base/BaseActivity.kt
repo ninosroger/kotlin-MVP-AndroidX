@@ -8,6 +8,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 
 /**
  * Created by ninos on 2019/1/8.
@@ -51,6 +52,10 @@ abstract class BaseActivity<P : BasePresenter<*, *>> : AppCompatActivity(), Base
      */
     override fun showToast(text: String) {
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+    }
+
+    override fun showSnackbar(text: String, view: View) {
+        Snackbar.make(view, text, Snackbar.LENGTH_LONG).show()
     }
 
     /**
