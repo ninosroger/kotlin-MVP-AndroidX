@@ -4,7 +4,7 @@ import androidx.room.Room
 import com.ninos.kotlin_mvp_androidx.repository.api.ApiService
 import com.ninos.kotlin_mvp_androidx.repository.localdb.LocalDB
 import com.ninos.kotlin_mvp_androidx.repository.okhttp.OkHttpService
-import com.ninos.kotlin_mvp_androidx.widget.Application
+import com.ninos.kotlin_mvp_androidx.Application
 
 /**
  * Created by ninos on 2019/1/8.

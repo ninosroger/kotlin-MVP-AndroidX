@@ -1,9 +1,8 @@
 package com.ninos.kotlin_mvp_androidx.repository.api
 
 import com.ninos.kotlin_mvp_androidx.repository.bean.SourceData
+import io.reactivex.Observable
 import retrofit2.http.*
-import rx.Observable
-
 /**
  * Created by ninos on 2019/1/8.
  */

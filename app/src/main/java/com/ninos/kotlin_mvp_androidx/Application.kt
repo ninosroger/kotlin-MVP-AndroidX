@@ -1,4 +1,4 @@
-package com.ninos.kotlin_mvp_androidx.widget
+package com.ninos.kotlin_mvp_androidx
 
 import androidx.multidex.MultiDexApplication
 

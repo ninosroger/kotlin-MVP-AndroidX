@@ -4,7 +4,7 @@ import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable
 import androidx.annotation.*
 import androidx.core.content.ContextCompat
-import com.ninos.kotlin_mvp_androidx.widget.Application
+import com.ninos.kotlin_mvp_androidx.Application
 
 object ResourcesUtils {
 
