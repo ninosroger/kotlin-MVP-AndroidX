@@ -16,7 +16,6 @@ import com.google.android.material.snackbar.Snackbar
  * Created by ninos on 2019/1/8.
  */
 abstract class BaseFragment<P : BasePresenter<*, *>> : Fragment(), BaseView {
-
     lateinit var presenter: P
     private var dialog: AlertDialog? = null
 
@@ -171,5 +170,5 @@ abstract class BaseFragment<P : BasePresenter<*, *>> : Fragment(), BaseView {
             dialog!!.dismiss()
     }
 
-    override fun finishActivity() = activity!!.finish()
+    override fun finishActivity() = activity!!.onBackPressed()
 }

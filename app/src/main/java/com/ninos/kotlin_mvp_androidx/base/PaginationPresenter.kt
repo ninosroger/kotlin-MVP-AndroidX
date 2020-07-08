@@ -24,6 +24,4 @@ abstract class PaginationPresenter<M : Any, V : LoadMoreView> : BasePresenter<M,
         else
         //还有更多
             view.hasMore()
-
-
 }

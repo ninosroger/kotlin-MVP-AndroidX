@@ -162,5 +162,5 @@ abstract class BaseActivity<P : BasePresenter<*, *>> : AppCompatActivity(), Base
             dialog!!.dismiss()
     }
 
-    override fun finishActivity() = finish()
+    override fun finishActivity() = onBackPressed()
 }
